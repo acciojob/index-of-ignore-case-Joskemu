@@ -1,8 +1,8 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-}
+// Get the input field element by its id
+const fnameInput = document.getElementById('fname');
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+// Add an event listener to the input field that triggers when the user leaves the field (onblur event)
+fnameInput.addEventListener('blur', function() {
+    // Convert the text inside the input to uppercase when the field loses focus
+    fnameInput.value = fnameInput.value.toUpperCase();
+});
